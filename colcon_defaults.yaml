@@ -1,0 +1,13 @@
+build:
+  symlink-install: true
+  continue-on-error: true
+  packages-ignore-regex:
+    - "^test_.*"
+    - ".*_example[s]?_.*"
+    - ".*_demo[s]?_.*"
+  packages-ignore:
+    - gz_ros2_control
+    - gz_ros2_control_demos
+    - nav2_system_tests
+    - rosbag2_examples_cpp
+    - rosbag2_tests

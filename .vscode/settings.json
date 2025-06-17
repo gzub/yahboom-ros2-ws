@@ -1,0 +1,30 @@
+{
+    "python.analysis.exclude": [
+        "**/ext_src/**",
+        "**/install/**/*",
+        "**/build/**/*",
+        "**/log/**/*"
+    ],
+    "files.watcherExclude": {
+        "**/build/**": true,
+        "**/ext_src/**": true,
+        "**/install/**": true,
+        "**/log/**": true,
+    },
+    "C_Cpp.codeAnalysis.exclude": {
+        "**/build/**": true,
+        "**/ext_src/**": true,
+        "**/install/**": true,
+        "**/log/**": true,
+    },
+    "C_Cpp.files.exclude": {
+        "**/build/**": true,
+        "**/ext_src/**": true,
+        "**/install/**": true,
+        "**/log/**": true
+    },
+    "search.exclude": {
+        "**/log/**": true
+    },
+    "cmake.sourceDirectory": "/home/gzub/yahboom-ros2-ws/build/osrf_testing_tools_cpp/googletest-1.14-extracted"
+}
