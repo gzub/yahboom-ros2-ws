@@ -4,7 +4,7 @@ This workspace contains ROS2 packages and configuration for a Yahboom Ackermann 
 
 ## Features
 
-- Ackermann steering robot control using ros2-control
+- Ackermann steering robot control
 - Integration with Yahboom Robot Expansion Board v3.0
 - Camera support for object detection, tracking, visual odometry, and SLAM
 - Sensor fusion with the onboard IMU
@@ -31,21 +31,12 @@ This workspace contains ROS2 packages and configuration for a Yahboom Ackermann 
 
 ### Workspace Setup
 
-```bash
-# Clone this repository and enter the workspace
-cd ~/yahboom-ros2-ws
-```
 
 ### Running the Robot
 
 
-
 ## Project Structure
 
-- `src/yahboomcar_nav/` - Navigation and robot control nodes
-- `src/yahboomcar_description/` - Robot URDF, meshes, and description files
-- `src/navigation2/` - ROS2 Navigation2 stack
-- `raspberrypi_ai_camera_ros2/` - AI camera integration (if present)
 - `scripts/` - Utility scripts
 
 ## Contributing
@@ -54,12 +45,6 @@ cd ~/yahboom-ros2-ws
 - Use descriptive names and add docstrings to all public functions/classes.
 - Prefer explicit error handling and avoid magic numbers.
 - Add comments for complex logic.
-
-## Future Directions
-
-- Full ros2-control integration for movement
-- Advanced camera-based features: object detection, tracking, visual odometry, SLAM
-- Sensor fusion with IMU and camera
 
 ## References
 

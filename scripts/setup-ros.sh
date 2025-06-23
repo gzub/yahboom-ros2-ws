@@ -3,7 +3,7 @@
 ###############################################################################
 # setup-ros.sh
 #
-# This script automates the setup of a ROS 2 workspace for the PiCarX project.
+# This script automates the setup of a ROS 2 workspace for the robot project.
 # It installs required dependencies, clones and updates necessary repositories,
 # configures rosdep, and builds the workspace using colcon.
 #
@@ -216,7 +216,8 @@ clone_repo https://github.com/PickNikRobotics/RSL.git main "$EXTERNAL_SOURCE_DIR
 clone_repo https://github.com/ros-drivers/ackermann_msgs.git ros2 "$EXTERNAL_SOURCE_DIR/ackermann_msgs"
 clone_repo https://github.com/ros/diagnostics.git ros2-kilted "$EXTERNAL_SOURCE_DIR/diagnostics"
 clone_repo https://github.com/ros/filters.git ros2 "$EXTERNAL_SOURCE_DIR/filters"
-
+clone_repo https://github.com/ros/joint_state_publisher.git ros2 "$EXTERNAL_SOURCE_DIR/joint_state_publisher"
+clone_repo https://github.com/ros/xacro.git ros2 "$EXTERNAL_SOURCE_DIR/xacro"
 
 # Raspberry Pi AI Camera ROS2 packages
 #clone_repo https://github.com/mzahana/raspberrypi_ai_camera_ros2.git camerainfo "$EXTERNAL_SOURCE_DIR/raspberrypi_ai_camera_ros2"
@@ -244,7 +245,7 @@ clone_repo https://github.com/RobotWebTools/web_video_server.git ros2 "$EXTERNAL
 # Nav2
 echo Installing Navigation2
 clone_repo https://github.com/BehaviorTree/BehaviorTree.CPP.git master "$EXTERNAL_SOURCE_DIR/BehaviorTree.CPP"
-clone_repo https://github.com/cra-ros-pkg/robot_localization.git ros2 "$EXTERNAL_SOURCE_DIR/robot_localization"
+clone_repo https://github.com/cra-ros-pkg/robot_localization.git kilted-devel "$EXTERNAL_SOURCE_DIR/robot_localization"
 clone_repo https://github.com/DLu/tf_transformations.git main "$EXTERNAL_SOURCE_DIR/tf_transformations"
 clone_repo https://github.com/ros-geographic-info/geographic_info.git ros2 "$EXTERNAL_SOURCE_DIR/geographic_info"
 clone_repo https://github.com/ros-navigation/navigation2.git ${ROS_DISTRO} "$EXTERNAL_SOURCE_DIR/navigation2"
@@ -253,8 +254,8 @@ clone_repo https://github.com/SteveMacenski/slam_toolbox.git ros2 "$EXTERNAL_SOU
 
 # IMUTools
 # echo Installing IMUTools
-# clone_repo https://github.com/CCNYRoboticsLab/imu_tools.git ${ROS_DISTRO} src/imu_tools
-# clone_repo https://github.com/ros-perception/imu_pipeline.git ros2 src/imu_pipeline
+clone_repo https://github.com/CCNYRoboticsLab/imu_tools.git ${ROS_DISTRO} "$EXTERNAL_SOURCE_DIR/imu_tools"
+clone_repo https://github.com/ros-perception/imu_pipeline.git ros2 "$EXTERNAL_SOURCE_DIR/imu_pipeline"
 
 # rqt_tf_tree
 #echo Installing rqt_tf_tree

@@ -531,6 +531,9 @@ class Rosmaster(object):
                 )
                 self.__uart_state = 1
                 time.sleep(0.05)
+                return True
+            else:
+                return False
         except Exception as e:
             self.logger.error("create_receive_threading error: %s", e)
             return False
@@ -2628,4 +2631,5 @@ if __name__ == "__main__":
             time.sleep(0.1)
     except KeyboardInterrupt:
         bot.set_car_motion(0, 0, 0)
+        bot.close()
     exit(0)

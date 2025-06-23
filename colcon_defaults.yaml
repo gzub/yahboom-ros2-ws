@@ -4,6 +4,7 @@ build:
   packages-ignore-regex:
     - "^test_.*"
     - ".*_example[s]?_.*"
+    - "example[s]?_.*"
     - ".*_demo[s]?_.*"
   packages-ignore:
     - gz_ros2_control

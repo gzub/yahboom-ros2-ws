@@ -1,0 +1,4 @@
+include README.md
+include Rosmaster_Lib.py
+include __init__.py
+recursive-include resource *
